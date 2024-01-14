@@ -60,14 +60,7 @@ body[data-text-weight] {
 
 
 
-
-
-
-
-
-
-
-
+/* checkbox */
 
 
 .toggle-pill-bw input[type="checkbox"] {
@@ -156,7 +149,7 @@ body[data-text-weight] {
 
 
 
-
+/* color picker */
 
 .color-picker{
     display: flex;
@@ -185,24 +178,7 @@ input[type="range"]{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* range */
 
 
 input[type=range] {

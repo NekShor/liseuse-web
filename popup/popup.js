@@ -50,8 +50,6 @@ function setCss(){
 
 function importCss(){
     ( async () => {
-        var color1;
-        var color2;
         var transparence;
         
         var newPremise = new Promise((resolve, reject) => {
@@ -78,10 +76,7 @@ function importCss(){
 
         var data = await newPremise;
 
-        
-
         transparence = Math.round((data.transparence*255)/100).toString(16)
-
         var colorTransparence = data.color1+transparence
 
         chrome.tabs.executeScript({

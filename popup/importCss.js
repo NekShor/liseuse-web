@@ -12,7 +12,6 @@ var css = `
     font-weight: ${weight}!important;
 
 }
-
 `
 var style = document.createElement('style');
 
