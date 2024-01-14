@@ -6,9 +6,35 @@
 
     </head>
     <body>
+        <h1>Parametres</h1>
         <label for="input">Mode liseuse</label>
-        <input type="checkbox" id="input">
-
+        <div class="item">
+            <div class="toggle-pill-color">
+              <input type="checkbox" id="input" name="check">
+              <label for="input"></label>
+            </div>
+        </div>
+        <br/>
+        <label for="color1">Couleur fond</label>
+        <input type="color" id="color1" class="color-picker" value="#e5e5e5" >
+        <br/>
+        <label for="color2">Couleur texte</label>
+        <input type="color" id="color2" class="color-picker" value="#0a0908" >
+        <br/>
+        <label for="transparence">Transparence du fond</label>
+        <input type="range" id="transparence" min="0" max="100" value="50" step="1">
+        <br/>
+        <label for="taille">Taille du texte</label>
+        <input type="range" id="taille" min="0" max="50" value="50" step="1" >
+        <br/>
+        <label for="weight">Text bold</label>
+        <div class="item">
+            <div class="toggle-pill-color">
+              <input type="checkbox" id="weight" name="check">
+              <label for="weight"></label>
+            </div>
+        </div>
+        
         <script type="text/javascript" src="./popup.js"></script>
     </body>
 </html>

@@ -1,0 +1,315 @@
+/* popup.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 20px;
+    width: 300px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+input[type="checkbox"] {
+    margin-left: 5px;
+}
+
+input[type="color"],
+input[type="range"] {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* Utilisation de variables CSS pour une personnalisation facile */
+:root {
+    --background-color: #e5e5e5;
+    --text-color: #0a0908;
+    --transparency: 0.5;
+    --text-size: 1em;
+    --text-weight: normal;
+}
+
+/* Mise à jour des variables en fonction des choix de l'utilisateur */
+body[data-background-color] {
+    --background-color: attr(data-background-color);
+}
+
+body[data-text-color] {
+    --text-color: attr(data-text-color);
+}
+
+body[data-transparency] {
+    --transparency: calc(attr(data-transparency) / 100);
+}
+
+body[data-text-size] {
+    --text-size: calc(attr(data-text-size) * 1px);
+}
+
+body[data-text-weight] {
+    --text-weight: attr(data-text-weight);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.toggle-pill-bw input[type="checkbox"] {
+    display: none;
+  }
+  .toggle-pill-bw input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    width: 3em;
+    height: 1.6em;
+    margin-bottom: 20px;
+    background: #50565a;
+    border-radius: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+  }
+  .toggle-pill-bw input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 1em;
+    background: #f7f2f2;
+    position: absolute;
+    left: 0.2em;
+    top: 0.2em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .toggle-pill-bw input[type="checkbox"]:checked + label {
+    background: #40464a;
+  }
+  .toggle-pill-bw input[type="checkbox"]:checked + label:before {
+    left: 1.6em;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  /* toggle-pill-bw end */
+  
+  /* toggle-pill-color */
+  .toggle-pill-color input[type="checkbox"] {
+    display: none;
+  }
+  .toggle-pill-color input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    width: 3em;
+    height: 1.6em;
+    margin-bottom: 20px;
+    border-radius: 1em;
+    background: #e84d4d;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-transition: background 0.1s ease-in-out;
+    transition: background 0.1s ease-in-out;
+  }
+  .toggle-pill-color input[type="checkbox"] + label:before {
+    content: "";
+    display: block;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 1em;
+    background: #fff;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 0.2em;
+    top: 0.2em;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
+  .toggle-pill-color input[type="checkbox"]:checked + label {
+    background: #47cf73;
+  }
+  .toggle-pill-color input[type="checkbox"]:checked + label:before {
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+    left: 1.6em;
+  }
+
+
+
+
+
+
+.color-picker{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 2px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    height: 50px;
+}
+
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type=range] {
+    -webkit-appearance: none;
+    margin: 18px 0;
+    width: 100%;
+  }
+  
+  input[type=range]::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+    background: rgba(59,173,227,1);
+    background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+    height: 2px;
+  }
+  
+  input[type=range]:focus {
+    outline: none;
+  }
+  
+  input[type=range]::-moz-range-track {
+    -moz-appearance: none;
+    background: rgba(59,173,227,1);
+    background: -moz-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, rgba(59,173,227,1)), color-stop(25%, rgba(87,111,230,1)), color-stop(51%, rgba(152,68,183,1)), color-stop(100%, rgba(255,53,127,1)));
+    background: -webkit-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -o-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: -ms-linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    background: linear-gradient(45deg, rgba(59,173,227,1) 0%, rgba(87,111,230,1) 25%, rgba(152,68,183,1) 51%, rgba(255,53,127,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3bade3 ', endColorstr='#ff357f ', GradientType=1 );
+    height: 2px;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    max-width: 80px;
+    position: relative;
+    bottom: 11px;
+    background-color: #1d1c25;
+    cursor: -webkit-grab;
+  
+    -webkit-transition: border 1000ms ease;
+    transition: border 1000ms ease;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    -moz-appearance: none;
+    border: 2px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    max-width: 80px;
+    position: relative;
+    bottom: 11px;
+    background-color: #1d1c25;
+    cursor: -moz-grab;
+    -moz-transition: border 1000ms ease;
+    transition: border 1000ms ease;
+  }
+  
+  
+  
+  .range.blue::-webkit-slider-thumb {
+     border-color: rgb(59,173,227);
+  }
+  
+  .range.ltpurple::-webkit-slider-thumb {
+     border-color: rgb(87,111,230);
+  }
+  
+  .range.purple::-webkit-slider-thumb {
+     border-color: rgb(152,68,183);
+  }
+  
+  .range.pink::-webkit-slider-thumb {
+     border-color: rgb(255,53,127);
+  }
+  
+  .range.blue::-moz-range-thumb {
+     border-color: rgb(59,173,227);
+  }
+  
+  .range.ltpurple::-moz-range-thumb {
+     border-color: rgb(87,111,230);
+  }
+  
+  .range.purple::-moz-range-thumb {
+     border-color: rgb(152,68,183);
+  }
+  
+  .range.pink::-moz-range-thumb {
+     border-color: rgb(255,53,127);
+  }
+  
+  input[type=range]::-webkit-slider-thumb:active {
+    cursor: -webkit-grabbing;
+  }
+  
+  input[type=range]::-moz-range-thumb:active {
+    cursor: -moz-grabbing;
+  }
