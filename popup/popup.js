@@ -98,20 +98,32 @@ function importCss(){
 }
 
 document.addEventListener('DOMContentLoaded', (event) => {
-    chrome.storage.sync.get(['color1', 'color2', 'transparence', 'taille', 'weight'], function(data) {
+    chrome.storage.sync.get(['color1', 'color2', 'transparence', 'taille', 'weight', 'inputChecked'], function(data) {
+        if(data.color1 == undefined){
+            data.color1 = '#0a0908'
+        }
+        if(data.color2 == undefined){
+            data.color2 = '#e5e5e5'
+        }
+        if(data.transparence == undefined){
+            data.transparence = '1'
+        }
+        if(data.taille == undefined){
+            data.taille = '16'
+        }
+        if(data.weight == undefined){
+            data.weight = 'normal'
+        }
         document.getElementById('color1').value = data.color1
         document.getElementById('color2').value = data.color2
         document.getElementById('transparence').value = data.transparence
         document.getElementById('taille').value = data.taille
         document.getElementById('weight').value = data.weight
+        document.getElementById('input').checked = data.inputChecked;
+
     });
 
     importCss()
-    
-    chrome.storage.sync.get('inputChecked', function(data) {
-        console.log(data)
-        document.getElementById('input').checked = data.inputChecked;
-    });
 
     setCss()
 })
