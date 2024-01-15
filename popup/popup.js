@@ -77,6 +77,11 @@ function importCss(){
         var data = await newPremise;
 
         transparence = Math.round((data.transparence*255)/100).toString(16)
+        if(transparence.length == 1){
+            transparence = '0'+transparence
+        }else{
+            transparence = `${transparence}`
+        }
         var colorTransparence = data.color1+transparence
 
         chrome.tabs.executeScript({
