@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             data.color2 = '#e5e5e5'
         }
         if(data.transparence == undefined){
-            data.transparence = '1'
+            data.transparence = '100'
         }
         if(data.taille == undefined){
             data.taille = '16'
